@@ -1,0 +1,12 @@
+zh-CN:
+  books:
+    index:
+      options: '操作'
+  activerecord:
+    models:
+      book: '书籍'
+    attributes:
+      book:
+        title: '标题'
+        number: '编号'
+        amount: '金额'

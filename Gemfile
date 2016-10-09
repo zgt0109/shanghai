@@ -49,6 +49,7 @@ group :development do
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
   gem 'rails-erd', '~> 1.5'
   gem 'paranoia', '~> 2.2.0.pre'
+  gem 'rails-i18n', '~> 5.0', '>= 5.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
