@@ -5,8 +5,12 @@ zh-CN:
   activerecord:
     models:
       book: '书籍'
+      user: '用户'
     attributes:
       book:
         title: '标题'
         number: '编号'
         amount: '金额'
+      user: 
+        name: '名字'
+        password: '密码'
