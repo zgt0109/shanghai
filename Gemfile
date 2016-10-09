@@ -43,6 +43,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'semantic-ui-sass', '~> 2.2', '>= 2.2.4.0'
+  gem 'annotate', '~> 2.7', '>= 2.7.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
