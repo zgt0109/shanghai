@@ -1,6 +1,6 @@
 <p id="notice" class="ui message"><%= notice %></p>
 
-<h1>Books Lista</h1>
+<h1>Books List</h1>
 
 <table class= "ui table">
   <thead>
@@ -8,7 +8,7 @@
       <th><%= Book.human_attribute_name(:title) %></th>
       <th><%= Book.human_attribute_name(:number) %></th>
       <th><%= Book.human_attribute_name(:amount) %></th>
-      <th colspan="3"><%= t('books.index.options') %></th>
+      <th colspan="3"><%= t('action.options') %></th>
     </tr>
   </thead>
 
@@ -18,9 +18,9 @@
         <td><%= book.title %></td>
         <td><%= book.number %></td>
         <td><%= book.amount %></td>
-        <td><%= link_to 'Show', book, class: "ui small button blue" %></td>
-        <td><%= link_to 'Edit', edit_book_path(book), class: "ui small button gray" %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui small button red " %></td>
+        <td><%= link_to t('action.show'), book, class: "ui small button blue" %></td>
+        <td><%= link_to t('action.edit'), edit_book_path(book), class: "ui small button gray" %></td>
+        <td><%= link_to t('action.destroy'), book, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui small button red " %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path, class: "ui primary button" %>
+<%= link_to t('action.new'), new_book_path, class: "ui primary button" %>

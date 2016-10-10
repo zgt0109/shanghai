@@ -1,7 +1,10 @@
 zh-CN:
-  books:
-    index:
-      options: '操作'
+  action:
+    options: '操作'
+    new: '新增'
+    show: '详情'
+    edit: '编辑'
+    destroy: '删除'
   activerecord:
     models:
       book: '书籍'
@@ -14,3 +17,4 @@ zh-CN:
       user: 
         name: '名字'
         password: '密码'
+        password_confirmation: '确认密码'
