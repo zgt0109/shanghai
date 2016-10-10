@@ -4,7 +4,7 @@
 
 #### config/application.rb
     config.generators.assets = false
-    config.generators.assets = false
+    config.generators.helper = false
     
 #### rails g scaffold Book title number amount
   
