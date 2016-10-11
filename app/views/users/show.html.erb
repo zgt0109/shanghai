@@ -5,5 +5,11 @@
   <%= @user.name %>
 </p>
 
+<p>
+	<%= @answer.to_s.length %><br>
+	<%= @answer.to_s %><br>
+	<%= @answer.to_s[53, 100] %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

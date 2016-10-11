@@ -10,6 +10,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    res = RestClient.get 'http://localhost:3000/users/new'
+    @res = res.body
+    regex = /<input type="hidden" name="authenticity_token" value="(.*)"/
+    if regex =~ @res
+      @answer = regex.match(@res)
+    end
   end
 
   # GET /users/new
