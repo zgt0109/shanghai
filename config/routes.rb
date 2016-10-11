@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'gateway/index'
+
   resources :orders
   resources :users
   resources :books
