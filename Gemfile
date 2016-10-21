@@ -51,6 +51,7 @@ group :development do
   gem 'paranoia', '~> 2.2.0.pre'
   gem 'rails-i18n', '~> 5.0', '>= 5.0.1'
   gem 'rest-client', '~> 2.0'
+  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
