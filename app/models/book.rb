@@ -24,4 +24,62 @@
 class Book < ApplicationRecord
 	# acts_as_paranoid
 	belongs_to :user
+
+	before_validation do
+    puts "before_validation"
+  end
+
+  after_validation do
+    puts "after_validation"
+  end
+
+  before_save do
+    puts "before_save"
+  end
+
+  around_save :test_around_save
+  def test_around_save
+    puts "begin around_save"
+    yield
+    puts "end around_save"
+  end
+
+  before_create do
+    puts "before_create"
+  end
+
+	before_update do
+    puts "before_update"
+  end
+
+  around_create :test_around_create
+  def test_around_create
+    puts "begin around_create"
+    yield
+    puts "end around_create"
+  end
+
+	around_update do
+		puts "around_update"
+	end
+
+  after_create do
+    puts "after_create"
+  end
+
+	after_update do
+    puts "after_update"
+  end
+
+  after_save do
+    puts "after_save"
+  end
+
+  after_commit do
+    puts "after_commit"
+  end
+
+  after_rollback do
+    puts "after_rollback"
+  end
 end
