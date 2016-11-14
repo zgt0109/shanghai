@@ -10,6 +10,7 @@
 #  updated_at :datetime         not null
 #  deleted_at :datetime
 #  user_id    :integer
+#  state      :string(255)
 #
 # Indexes
 #
@@ -22,10 +23,29 @@
 #
 
 class Book < ApplicationRecord
-	# acts_as_paranoid
-	belongs_to :user
+  # acts_as_paranoid
+  belongs_to :user
 
-	before_validation do
+  include AASM
+  aasm column: :state do
+    state :sleeping, :initial => true
+    state :running
+    state :cleaning
+
+    event :run do
+      transitions :from => :sleeping, :to => :running
+    end
+
+    event :clean do
+      transitions :from => :running, :to => :cleaning
+    end
+
+    event :sleep do
+      transitions :from => :cleaning, :to => :sleeping
+    end
+  end
+
+  before_validation do
     puts "before_validation"
   end
 
@@ -48,7 +68,7 @@ class Book < ApplicationRecord
     puts "before_create"
   end
 
-	before_update do
+  before_update do
     puts "before_update"
   end
 
@@ -59,15 +79,15 @@ class Book < ApplicationRecord
     puts "end around_create"
   end
 
-	around_update do
-		puts "around_update"
-	end
+  around_update do
+    puts "around_update"
+  end
 
   after_create do
     puts "after_create"
   end
 
-	after_update do
+  after_update do
     puts "after_update"
   end
 
