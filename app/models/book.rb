@@ -22,6 +22,10 @@
 #
 
 class Book < ApplicationRecord
+  include AASM
+
+  aasm :column => 'state' do
+  end
 	# acts_as_paranoid
 	belongs_to :user
 

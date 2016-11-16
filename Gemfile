@@ -53,6 +53,7 @@ group :development do
   gem 'rest-client', '~> 2.0'
   gem 'dotenv-rails'
   gem 'foreman'
+  gem 'aasm'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
