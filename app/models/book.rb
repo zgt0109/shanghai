@@ -10,6 +10,7 @@
 #  updated_at :datetime         not null
 #  deleted_at :datetime
 #  user_id    :integer
+#  state      :string(255)
 #
 # Indexes
 #

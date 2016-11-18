@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010072305) do
+ActiveRecord::Schema.define(version: 20161116061353) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title"
-    t.string   "number"
-    t.string   "amount"
+    t.string   "title",                   comment: "书的名称"
+    t.string   "number",                  comment: "书的编号"
+    t.string   "amount",                  comment: "书的价格"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.integer  "user_id"
+    t.string   "state"
     t.index ["deleted_at"], name: "index_books_on_deleted_at", using: :btree
     t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
@@ -34,8 +35,8 @@ ActiveRecord::Schema.define(version: 20161010072305) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "password_digest"
+    t.string   "name",                         comment: "用户名"
+    t.string   "password_digest",              comment: "密码"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
