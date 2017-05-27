@@ -25,6 +25,9 @@ class Book < ApplicationRecord
 	# acts_as_paranoid
 	belongs_to :user
 
+	validates :title, presence: true, length: {in: 2..4}, on: :create
+	validates :number, presence: true, length: {in: 15..18}, on: :create
+
 	before_validation do
     puts "before_validation"
   end
