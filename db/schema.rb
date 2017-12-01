@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20161010072305) do
     t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
 
-  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id"
-    t.string   "number"
-    t.string   "address"
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "订单表" do |t|
+    t.integer  "user_id",                 comment: "用户ID"
+    t.string   "number",                  comment: "订单编号"
+    t.string   "address",                 comment: "订单地址"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree

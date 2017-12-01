@@ -15,7 +15,7 @@
 #
 # Foreign Keys
 #
-#  fk_rails_f868b47f6a  (user_id => users.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class Order < ApplicationRecord

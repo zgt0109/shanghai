@@ -18,7 +18,7 @@
 #
 # Foreign Keys
 #
-#  fk_rails_bc582ddd02  (user_id => users.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class Book < ApplicationRecord
